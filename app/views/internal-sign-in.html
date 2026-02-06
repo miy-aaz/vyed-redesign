@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="What type of organisation do you work for?" %}
+
+{% block beforeContent %}
+
+    {{ govukBackLink({
+        text: "Back",
+        href: "javascript:window.history.back()"
+    }) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form novalidate method="post">
+
+      {{ govukRadios({
+        name: "new[organisationType]",
+        fieldset: {
+          legend: {
+            text: pageName,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        value: data.new.organisationType,
+        items: [
+          {
+            value: "A learning provider (a school, academy, college or further education provider)",
+            text: "A learning provider (a school, academy, college or further education provider)"
+          },
+          {
+            value: "A responsible body (academy trust, mayoral combined authority or local authority)",
+            text: "A responsible body (academy trust, mayoral combined authority or local authority)"
+          },
+           {
+            value: " Department for Education partner organisation (another government department or agency like the Cabinet Office)",
+            text: " Department for Education partner organisation (another government department or agency like the Cabinet Office)"
+          },
+           {
+            value: "The Department for Education",
+            text: "The Department for Education"
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+
+    </form> 
+  </div>
+</div>
+
+{% endblock %}
