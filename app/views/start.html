@@ -1,0 +1,28 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="View your education data (VYED)" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+    <p>The VYED service helps organisations working with the Department for Education (DfE) make better decisions using data.</p>
+    <p>You can use it to access interactive dashboards and reports based on the data your organisation submits.</p>
+    <h1 class="govuk-heading-m">Before you start</h1>
+    <p>You’ll need a DfE Sign-in account to access VYED. If you do not have an account, use this <a href="">guidance</a> to create a DfE Sign-in account and access VYED. </p>
+    <h1 class="govuk-heading-m">Guidance</h1>
+    <p>If you are an approver, <a href="">read the approver guidance</a> to learn how to manage access requests.</p>
+    <p>If you are a user from a learning provider, responsible body or a DfE partner organisation, <a href="">read our user guidance</a> to learn how to get access to VYED.  </p>
+
+    {{ govukButton({
+      text: "Go to prototype",
+      href: "/radio-button",
+      isStartButton: true
+    }) }}
+  </div>
+</div>
+
+{% endblock %}
