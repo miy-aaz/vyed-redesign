@@ -3,8 +3,8 @@
 {% set pageName="View your education data" %}
 
 {% block content %}
-{% set attendanceContent %}
-{% include "_includes/attendance-content.html" %}
+{% set oldAttendanceContent %}
+{% include "_includes/old-attendance-content.html" %}
 {% endset %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -17,7 +17,7 @@
             text: "Monitor your school attendance"
           },
           content: {
-            html: attendanceContent
+            html: oldAttendanceContent
           }
         }
       ]
